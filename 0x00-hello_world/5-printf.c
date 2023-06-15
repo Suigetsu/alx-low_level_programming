@@ -2,7 +2,7 @@
 
 /**
  * main - another function using printf this time
- * Return : 0 again if everything is good
+ * Return: 0 again if everything is good
  */
 
 int	main(void)

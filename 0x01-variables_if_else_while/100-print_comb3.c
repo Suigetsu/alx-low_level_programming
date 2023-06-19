@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main - printing combos of numbers
+ * Return: 0
+ */
+
 int	main(void)
 {
 	int	i;

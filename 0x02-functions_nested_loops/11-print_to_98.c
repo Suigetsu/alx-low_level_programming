@@ -11,6 +11,11 @@ void	my_putnbr(int n)
 
 	if (n >= 0 && n <= 9)
 		_putchar(s[n]);
+	else if (n < 0)
+	{
+		_putchar('-');
+		my_putnbr(n * -1);
+	}
 	else if (n > 9)
 	{
 		my_putnbr(n / 10);

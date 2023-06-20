@@ -9,7 +9,7 @@
 
 int	print_last_digit(int n)
 {
-	int 			to_print;
+	int				to_print;
 	long int		helper;
 
 	helper = n;

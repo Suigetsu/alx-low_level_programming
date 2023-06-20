@@ -9,12 +9,14 @@
 
 int	print_last_digit(int n)
 {
-	int to_print;
+	int 			to_print;
+	long int		helper;
 
+	helper = n;
 	to_print = 0;
 	if (n < 0)
-		n *= -1;
-	n %= 10;
-	to_print = n + '0';
-	return (_putchar(to_print), n);
+		helper *= -1;
+	helper %= 10;
+	to_print = helper + '0';
+	return (_putchar(to_print), helper);
 }

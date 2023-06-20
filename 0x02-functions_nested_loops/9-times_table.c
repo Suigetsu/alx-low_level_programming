@@ -26,7 +26,6 @@ void	times_table(void)
 {
 	int	i;
 	int	times;
-	int	res;
 
 	i = 0;
 	times = 0;
@@ -35,14 +34,13 @@ void	times_table(void)
 		times = 0;
 		while (times < 10)
 		{
-			res = times * i;
-			my_putnbr(res);
+			my_putnbr(times * i);
 			times++;
 			if (times == 10)
 				break;
 			_putchar(',');
 			_putchar(' ');
-			if (res < 10)
+			if (times * i < 10)
 				_putchar(' ');
 		}
 		_putchar('\n');

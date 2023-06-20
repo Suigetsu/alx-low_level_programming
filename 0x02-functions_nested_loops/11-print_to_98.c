@@ -29,9 +29,8 @@ void	print_to_98(int n)
 	{
 		while (n < 99)
 		{
-			my_putnbr(n);
-			n++;
-			if (n == 99);
+			my_putnbr(n++);
+			if (n == 99)
 				break;
 			_putchar(',');
 			_putchar(' ');

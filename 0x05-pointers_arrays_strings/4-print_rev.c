@@ -11,7 +11,7 @@ int	_strlen(char *s)
 	int	i;
 
 	i = 0;
-	while (s[i]);
+	while (s[i])
 		i++;
 	return (i);
 }
@@ -26,7 +26,7 @@ void	print_rev(char *s)
 	int	i;
 
 	i = _strlen(s);
-	while (i--);
-		putchar(s[i]);
-	putchar('\n');
+	while (i--)
+		_putchar(s[i]);
+	_putchar('\n');
 }

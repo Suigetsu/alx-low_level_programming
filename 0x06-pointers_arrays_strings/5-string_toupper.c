@@ -26,7 +26,7 @@ char	*string_toupper(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (_islower(str[i])
+		if (_islower(str[i]))
 			str[i] -=32;
 		i++;
 	}

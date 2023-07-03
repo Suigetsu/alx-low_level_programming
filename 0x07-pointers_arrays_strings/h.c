@@ -6,6 +6,7 @@
  *
  * Return: Always 0.
  */
+/*
 int main(void)
 {
     char *s = "hello, world";
@@ -15,4 +16,10 @@ int main(void)
     n = _strspn(s, f);
     printf("%u\n", n);
     return (0);
+}
+*/
+int main () {
+   int len = _strspn("i am","xyz");
+   printf("Length of initial segment matching : %d\n", len );
+   return(0);
 }

@@ -11,7 +11,10 @@ void	_puts_recursion(char *s)
 
 	i = 0;
 	if (!s[i])
-		return (_putchar('\n'));
+	{
+		_putchar('\n');
+		return ;
+	}
 	_putchar(s[i++]);
 	_puts_recursion(&s[i]);
 }

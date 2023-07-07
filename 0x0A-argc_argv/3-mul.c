@@ -10,7 +10,7 @@
 
 int	main(int ac, char **av)
 {
-	if (ac <= 2)
+	if (ac != 3)
 		return (printf("Error\n"), 1);
 	printf("%d\n", atoi(av[1]) * atoi(av[2]));
 	return (0);

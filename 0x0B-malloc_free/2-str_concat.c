@@ -56,22 +56,16 @@ char	*str_concat(char *s1, char *s2)
 	int		len2;
 
 	dest = NULL;
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
-	if (!s1)
-	{
-		s1 = "";
-		len1 = 1;
-	}
-	if (!s2)
-	{
-		s2 = "";
-		len2 = 1;
-	}
-	dest = malloc(((len1 + len2) * sizeof(char)) + 1);
+	if (s1)
+		len1 = _strlen(s1);
+	if (s2)
+		len2 = _strlen(s2);
+	dest = malloc((len1 + len2 + 1) * sizeof(char));
 	if (!dest)
 		return (NULL);
-	_strncpy(dest, s1, len1);
-	_strncpy(&dest[len1], s2, _strlen(s2));
+	if (s1)
+		_strncpy(dest, s1, len1);
+	if (s2)
+		_strncpy(&dest[len1], s2, _strlen(s2));
 	return (dest);
 }

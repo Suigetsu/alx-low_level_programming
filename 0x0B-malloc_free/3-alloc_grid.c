@@ -19,12 +19,12 @@ int	*_memset(int *s, int b, unsigned int n)
 }
 
 /**
- * free_grid - Frees a 2-dimensional grid previously created by alloc_grid.
+ * free_arr - Frees a 2-dimensional grid previously created by alloc_grid.
  * @grid: Pointer to the 2-dimensional grid.
  * @height: The height of the grid.
  */
 
-void	free_grid(int **grid, int height)
+void	free_arr(int **grid, int height)
 {
 	int	i;
 
@@ -59,7 +59,7 @@ int	**alloc_grid(int width, int height)
 		arr[i] = malloc(sizeof(int) * width);
 		if (!arr[i])
 		{
-			free_grid(arr, i);
+			free_arr(arr, i);
 			return (NULL);
 		}
 		_memset(arr[i++], 0, width);

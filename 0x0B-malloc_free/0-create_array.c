@@ -10,8 +10,8 @@
 
 char	*create_array(unsigned int size, char c)
 {
-	int		i;
-	char	*array;
+	unsigned int	i;
+	char			*array;
 
 	i = 0;
 	array = NULL;

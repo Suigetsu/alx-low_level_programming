@@ -106,7 +106,7 @@ char	**strtow(char *str)
 	j = 0;
 	k = 0;
 	start = 0;
-	if (!str || !_strcmp(str, ""))
+	if (!str || !_strcmp(str, "") || !wordcount(str))
 		return (NULL);
 	arr = malloc((wordcount(str) + 1) * sizeof(char *));
 	if (!arr)

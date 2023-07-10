@@ -128,7 +128,6 @@ char	**strtow(char *str)
 		if (!arr[k])
 			return (free_arr(arr, k), NULL);
 		_strncpy(arr[k++], &str[start], j);
-		arr[k][j] = '\0';
 	}
 	arr[k] = NULL;
 	return (arr);

@@ -54,7 +54,7 @@ char	*str_concat(char *s1, char *s2)
 	char	*dest;
 	int		len1;
 	int		len2;
-	
+
 	dest = NULL;
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
@@ -71,7 +71,7 @@ char	*str_concat(char *s1, char *s2)
 	dest = malloc(((len1 + len2) * sizeof(char)) + 1);
 	if (!dest)
 		return (NULL);
-	dest = _strncpy(dest, s1, len1);
-	dest = _strncpy(&dest[len1], s2, _strlen(s2));
+	_strncpy(dest, s1, len1);
+	_strncpy(&dest[len1], s2, _strlen(s2));
 	return (dest);
 }

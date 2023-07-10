@@ -1,19 +1,22 @@
 #include "main.h"
 
 /**
- * _strlen - a function that returns the length of a string
- * @s: the string
- * Return: the length
+ * _strcmp - a function that compares two strings
+ * @s1: first str
+ * @s2: second str
+ * Return: the difference
  */
 
-int	_strlen(char *s)
+int	_strcmp(char *s1, char *s2)
 {
 	int	i;
 
 	i = 0;
-	while (s[i])
+	if (!s1[i])
+		return (0);
+	while (s1[i] - s2[i] == 0 && (s1[i]))
 		i++;
-	return (i);
+	return (s1[i] - s2[i]);
 }
 
 /**
@@ -103,7 +106,7 @@ char	**strtow(char *str)
 	j = 0;
 	k = 0;
 	start = 0;
-	if (!str || str == "")
+	if (!str || !_strcmp(str, ""))
 		return (NULL);
 	arr = malloc((wordcount(str) + 1) * sizeof(char *));
 	if (!arr)
@@ -111,7 +114,7 @@ char	**strtow(char *str)
 	while (str[i])
 	{
 		j = 0;
-		while (str[i] == ' ' || str[i] == '\t' || str[i] == str[i] == '\n')
+		while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
 			i++;
 		if (!str[i])
 			break;

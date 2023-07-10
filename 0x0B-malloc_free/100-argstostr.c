@@ -85,7 +85,7 @@ char    *str_concat(char *s1, char *s2)
 char	*argstostr(int ac, char **av)
 {
 	int		i;
-	char	*str;`
+	char	*str;
 
 	i = 0;
 	str = NULL;

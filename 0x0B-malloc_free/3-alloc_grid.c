@@ -19,6 +19,22 @@ int	*_memset(int *s, int b, unsigned int n)
 }
 
 /**
+ * free_arr - a function that frees a 2d array
+ * @arr: the 2d array that we wil free
+ * @size: the size
+ */
+
+void	free_arr(int **arr, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+		free(arr[i++]);
+	free(arr);
+}
+
+/**
  * alloc_grid - Returns a pointer to a 2-dimensional array of integers.
  * @width: The width of the grid.
  * @height: The height of the grid.
@@ -36,9 +52,16 @@ int	**alloc_grid(int width, int height)
 	if (!width || !height)
 		return (NULL);
 	arr = malloc((sizeof(int *) * width));
+	if (!arr)
+		return (NULL);
 	while (i < width)
 	{
 		arr[i] = malloc(sizeof(int) * height);
+		if (!arr[i])
+		{
+			free_arr(arr, i);
+			return (NULL);
+		}
 		_memset(arr[i++], 0, height);
 	}
 	return (arr);

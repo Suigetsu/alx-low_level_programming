@@ -6,12 +6,12 @@
  * @height: The height of the grid.
  */
 
-void    free_grid(int **grid, int height)
+void	free_grid(int **grid, int height)
 {
-        int     i;
+	int	i;
 
-        i = 0;
-        while (i < height)
-                free(grid[i++]);
-        free(grid);
+	i = 0;
+	while (i < height)
+		free(grid[i++]);
+	free(grid);
 }

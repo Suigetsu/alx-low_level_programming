@@ -51,18 +51,18 @@ int	**alloc_grid(int width, int height)
 	i = 0;
 	if (!width || !height)
 		return (NULL);
-	arr = malloc((sizeof(int *) * width));
+	arr = malloc((sizeof(int *) * height));
 	if (!arr)
 		return (NULL);
-	while (i < width)
+	while (i < height)
 	{
-		arr[i] = malloc(sizeof(int) * height);
+		arr[i] = malloc(sizeof(int) * width);
 		if (!arr[i])
 		{
 			free_arr(arr, i);
 			return (NULL);
 		}
-		_memset(arr[i++], 0, height);
+		_memset(arr[i++], 0, width);
 	}
 	return (arr);
 }

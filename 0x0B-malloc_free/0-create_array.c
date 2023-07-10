@@ -17,11 +17,10 @@ char	*create_array(unsigned int size, char c)
 	array = NULL;
 	if (size == 0)
 		return (NULL);
-	array = malloc((sizeof(char) * size) + 1);
+	array = malloc(sizeof(char) * size);
 	if (!array)
 		return (NULL);
 	while (i < size)
 		array[i++] = c;
-	array[i] = '\0';
 	return (array);
 }

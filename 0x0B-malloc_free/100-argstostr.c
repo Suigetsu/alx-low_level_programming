@@ -85,21 +85,16 @@ char    *str_concat(char *s1, char *s2)
 char	*argstostr(int ac, char **av)
 {
 	int		i;
-	char	*str;
-	char	*temp;
+	char	*str;`
 
 	i = 0;
 	str = NULL;
-	temp = NULL;
 	if (!ac || !av)
 		return (NULL);
 	while (i < ac)
 	{
-		temp = str_concat(str, av[i++]);
-		if (str)
-			free(str);
-		str = str_concat(temp, "\n");
-		free(temp);
+		str = str_concat(str, av[i++]);
+		str = str_concat(str, "\n");
 	}
 	return (str);
 }

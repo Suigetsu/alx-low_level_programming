@@ -124,10 +124,11 @@ char	**strtow(char *str)
 			i++;
 			j++;
 		}
-		arr[k] = malloc(j * sizeof(char));
+		arr[k] = malloc((j + 1) * sizeof(char));
 		if (!arr[k])
 			return (free_arr(arr, k), NULL);
 		_strncpy(arr[k++], &str[start], j);
+		arr[k][j] = '\0';
 	}
 	arr[k] = NULL;
 	return (arr);

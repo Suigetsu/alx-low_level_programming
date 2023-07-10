@@ -86,15 +86,20 @@ char	*argstostr(int ac, char **av)
 {
 	int		i;
 	char	*str;
+	char	*temp;
 
 	i = 0;
 	str = NULL;
+	temp = NULL;
 	if (!ac || !av)
 		return (NULL);
 	while (i < ac)
 	{
-		str = str_concat(str, av[i++]);
-		str = str_concat(str, "\n");
+		temp = str_concat(str, av[i++]);
+		if (str)
+			free(str);
+		str = str_concat(temp, "\n");
+		free(temp);
 	}
 	return (str);
 }

@@ -58,18 +58,16 @@ char	*string_nconcat(char *s1, char *s2, unsigned int n)
 	int		len1;
 	int		len2;
 	int		to_allocat;
-	int		i;
 
 	dest = NULL;
 	len1 = 0;
 	len2 = 0;
-	i = 0;
 	to_allocat = 0;
 	if (s1)
 		len1 = _strlen(s1);
 	if (s2)
 		len2 = _strlen(s2);
-	if (n >= len2)
+	if (n >= (unsigned int)len2)
 		to_allocat = len1 + len2;
 	else
 		to_allocat = len1 + n;

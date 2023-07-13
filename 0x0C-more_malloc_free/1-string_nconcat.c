@@ -78,5 +78,6 @@ char	*string_nconcat(char *s1, char *s2, unsigned int n)
 		_strncpy(dest, s1, len1);
 	if (s2)
 		_strncpy(&dest[len1], s2, to_allocat - len1);
+	dest[to_allocat] = '\0';
 	return (dest);
 }

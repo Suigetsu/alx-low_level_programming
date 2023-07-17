@@ -1,6 +1,10 @@
 #ifndef DOG_H
 # define DOG_H
 
+# include <unistd.h>
+# include <stdio.h>
+# include <string.h>
+
 /**
  * struct dog - Represents information about a dog.
  * @name: The name of the dog.
@@ -17,5 +21,7 @@ struct	dog
 	float	age;
 	char	*owner;
 };
+
+void	init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif

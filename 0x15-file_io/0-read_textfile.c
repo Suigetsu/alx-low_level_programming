@@ -30,7 +30,7 @@ ssize_t	read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	buffer[letters] = '\0';
-	byte_w = write(1, buffer, letters);
+	byte_w = write(1, buffer, i);
 	if (byte_w < -1 || byte_w != i)
 	{
 		free(buffer);
